@@ -1,5 +1,7 @@
+import 'package:farmquest/screens/home.dart';
 import 'package:farmquest/screens/landing.dart';
 import 'package:farmquest/screens/splash.dart';
+import 'package:farmquest/screens/survey.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +20,13 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: Home(),
+      routes: {
+        '/': (context) => const Home(), // Default route
+        '/landing': (context) => const LandingScreen(),
+        '/survey': (context) => const SurveyScreen(),
+        '/home': (context) => HomeScreen(),
+      },
+      initialRoute: '/',
     );
   }
 }
@@ -28,6 +36,6 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LandingScreen();
+    return SafeArea(child: SplashScreen());
   }
 }

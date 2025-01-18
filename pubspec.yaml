@@ -92,4 +92,5 @@ flutter:
       fonts:
         - asset: fonts/static/Figtree-Bold.ttf
         - asset: fonts/static/Figtree-Regular.ttf
+        - asset: fonts/static/Figtree-Medium.ttf
           weight: 700
